@@ -1,0 +1,330 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Header */
+
+#header {
+    margin: 35px auto 10px auto;
+    min-height: 100%;
+    
+}
+
+#header h1{
+    margin-top: 5px;
+    color:hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    width: 60%;
+    word-wrap: break-word;
+    display: inline-block;
+    margin-left: 25%;
+    line-height: 40px;
+}
+
+
+
+
+#main-container{
+    height: auto;
+    margin-top: 50px;
+    
+ }
+
+
+/* Form */
+
+form{
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    width: 100%;
+    
+    bottom:0;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+#form-width-adjust{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 85%;
+}
+
+
+
+/* Bill div */
+#bill-div{
+    margin-top: 30px;
+}
+
+
+
+
+/* All inputs */
+
+input{
+    font-size: 24px;
+}
+
+
+/* People and bill inputs */
+input[type="number"]{
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 2px;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: hsl(183, 100%, 15%);
+    text-indent: 95%;
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 5% ;
+}
+
+
+#people-input{
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 5% ;
+}
+
+
+
+/* Percentage buttons */
+input[type="button"]{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    border:none;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+
+
+#custom-tip {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+}
+
+
+
+
+/* all paragrapths */
+p{
+    font-family: 'Space Mono', monospace;
+}
+
+
+
+
+
+#bill-div, 
+#numpeople-div,
+fieldset legend{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 20px;
+}
+
+
+
+fieldset{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#inside-field-set{
+    
+    display: grid;
+    grid-template-rows: repeat(3, 40px);
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+}
+
+
+#p-number-people{
+    display: inline-block;
+}
+
+
+/* Form footer div */
+
+#result-div {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "tipAmount totalTipWithOut"
+                          "perPerson totalTipWith"
+                          "button button";
+    grid-template-rows: 70px 70px 110px;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 20px;
+    justify-items: center;
+    align-items: flex-end;
+}
+
+#result-div *{
+    width:80%;
+}
+
+
+
+/* --------------- Grid Areas -------------- */
+
+#result-div .only-tips{
+    grid-area: tipAmount;
+}
+
+#result-div .result-price-tip{
+    grid-area: totalTipWithOut;
+    justify-self: right;
+    text-align: right;
+}
+
+#result-div .result-price-sum{
+    grid-area: totalTipWith;
+    justify-self: right;
+    text-align: right;
+}
+
+
+#result-div .tips-with-payment{
+    grid-area: perPerson;
+}
+
+
+#result-div .tips-with-payment,
+#result-div .only-tips{
+    color: hsl(0, 0%, 100%);
+}
+
+
+#tip-pay, #total-amoun-of-all{
+    color:hsl(172, 67%, 45%);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+
+#result-div .head-line-result{
+    font-family: 'Space Mono', monospace;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
+    
+}
+
+.slash-person{
+    color: hsl(184, 14%, 56%);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="reset"]{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    grid-area: button;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+
+/* --- Missing data classes ---  */
+
+#cant-be-zero{
+    float: right;
+    display: none;
+    font-weight: 200;
+    color: red;
+    display: none;
+}
+
+
+@media (min-width: 500px){
+    
+
+
+}
+
+
+@media (min-width: 1000px){
+    
+
+
+}
+
+
+@media (min-width: 1440px){
+    
+
+
+}
