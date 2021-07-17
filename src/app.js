@@ -21,7 +21,7 @@ function resultOfDevisionPerPerson(allThePeople, percentageOfTip, TotalBillToPay
 
     paragrapth_individual_tip.innerHTML = `$${tipPerPerson.toFixed(2)}`;
     paragrapth_tip_plus_payment.innerHTML = `$${perPersonTip_plusPayment.toFixed(2)}`;
-    console.log(22222222222222);
+
 }
 
 
@@ -40,15 +40,17 @@ for(let i = 0; i < button_inputs.length; i++){
             // Adding Custom tag to the input
             // customTipButton.innerHTML = "Custom";
             if (button_inputs[i].value.toUpperCase() === "CUSTOM"){
-                customTipButton.setAttribute("type", "number")
+                customTipButton.setAttribute("type", "number");
+
                 customTipButton.addEventListener("change", event => {
-                        console.log("changed")
-                        resultOfDevisionPerPerson(parseInt(number_of_people.value), 
-                        parseInt(customTipButton.value),
-                        parseFloat(end_bill_value_number))
-                    
-                    
-                    })
+                    console.log("changed")
+                    resultOfDevisionPerPerson(parseInt(number_of_people.value), 
+                    parseInt(customTipButton.value),
+                    parseFloat(end_bill_value_number))
+                
+                
+                })
+
             }
 
             resultOfDevisionPerPerson(parseInt(number_of_people.value), 
