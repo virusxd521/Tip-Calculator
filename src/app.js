@@ -5,7 +5,7 @@ const paragrapth_individual_tip = document.getElementById("tip-pay");
 const paragrapth_tip_plus_payment = document.getElementById("total-amoun-of-all");
 const erro_number_of_people_p = document.getElementById("cant-be-zero");
 const customTipButton = document.getElementById("custom-tip");
-const end_bill_value_number = end_bill.value;
+
 
 
 function resultOfDevisionPerPerson(allThePeople, percentageOfTip, TotalBillToPay){
@@ -34,7 +34,7 @@ function resultOfDevisionPerPerson(allThePeople, percentageOfTip, TotalBillToPay
 for(let i = 0; i < button_inputs.length; i++){
     console.log(button_inputs[i]);
     button_inputs[i].addEventListener("click", event => {
-        
+        const end_bill_value_number = end_bill.value;
         if( parseInt(number_of_people.value) > 0 ){
             
             // Adding Custom tag to the input
@@ -43,7 +43,7 @@ for(let i = 0; i < button_inputs.length; i++){
                 customTipButton.setAttribute("type", "number");
 
                 customTipButton.addEventListener("change", event => {
-                    console.log("changed")
+                  
                     resultOfDevisionPerPerson(parseInt(number_of_people.value), 
                     parseInt(customTipButton.value),
                     parseFloat(end_bill_value_number))
@@ -57,6 +57,7 @@ for(let i = 0; i < button_inputs.length; i++){
                             parseInt(button_inputs[i].value),
                             parseFloat(end_bill_value_number)
                             );
+                            
         } else {
             erro_number_of_people_p.style.display = "inline-block";
             number_of_people.style.border = "solid 2px red"
