@@ -32,7 +32,7 @@ function resultOfDevisionPerPerson(allThePeople, percentageOfTip, TotalBillToPay
 
 // looping over the button to get the percentages
 for(let i = 0; i < button_inputs.length; i++){
-    console.log(button_inputs[i]);
+  
     button_inputs[i].addEventListener("click", event => {
         const end_bill_value_number = end_bill.value;
         if( parseInt(number_of_people.value) > 0 ){

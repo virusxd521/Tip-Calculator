@@ -136,6 +136,7 @@ input[type="number"]{
     font-weight: 600;
     color: hsl(183, 100%, 15%);
     text-indent: 95%;
+    direction: ltr;
     background-image: url("./images/icon-dollar.svg");
     background-repeat: no-repeat;
     background-position: 5% ;
@@ -220,6 +221,7 @@ fieldset{
 
 #result-div {
     background-color: hsl(183, 100%, 15%);
+    
     border-radius: 10px;
     display: grid;
     grid-template-areas: "tipAmount totalTipWithOut"
@@ -248,12 +250,17 @@ fieldset{
     grid-area: totalTipWithOut;
     justify-self: right;
     text-align: right;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
 }
 
 #result-div .result-price-sum{
     grid-area: totalTipWith;
     justify-self: right;
     text-align: right;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 
