@@ -311,7 +311,8 @@ input[type="reset"]{
 
 /* --- Missing data classes ---  */
 
-#cant-be-zero{
+#cant-be-zero,
+#cant-be-zero_number{
     float: right;
     display: none;
     font-weight: 200;
